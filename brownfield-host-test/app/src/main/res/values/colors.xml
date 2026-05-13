@@ -1,0 +1,5 @@
+<resources>
+    <color name="host_primary">#0A7EA4</color>
+    <color name="host_on_primary">#FFFFFF</color>
+    <color name="host_scrim">#14000000</color>
+</resources>

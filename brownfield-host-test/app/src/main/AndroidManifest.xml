@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Sobrescreve RN: extrair .so evita falhas do SoLoader ao carregar do APK (ex.: libhermestooling). -->
+    <application
+        android:name=".HostApplication"
+        android:allowBackup="true"
+        android:extractNativeLibs="true"
+        android:icon="@drawable/ic_launcher_host"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_host"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BrownfieldHostTest"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:extractNativeLibs">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BrownfieldHostTest.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExpoEmbeddedActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/Theme.BrownfieldHostTest.NoActionBar" />
+    </application>
+</manifest>

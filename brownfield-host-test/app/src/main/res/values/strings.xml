@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Brownfield host</string>
+    <string name="main_toolbar_title">Host nativo</string>
+    <string name="main_title">Integração brownfield</string>
+    <string name="main_tag_native">UI nativa Android</string>
+    <string name="main_body">Esta é uma tela 100%% nativa (Material 3), com margens seguras para barra de status, recorte e navegação.\n\nToque no botão para abrir o módulo Expo/React Native empacotado no AAR. No build release o JavaScript já está embutido — sem Metro.</string>
+    <string name="main_button_open_expo">Abrir módulo Expo</string>
+    <string name="main_footer_hint">Safe area aplicada com WindowInsets · Edge-to-edge</string>
+</resources>

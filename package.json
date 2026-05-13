@@ -1,0 +1,63 @@
+{
+  "name": "vpm-expo",
+  "main": "expo-router/entry",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start",
+    "reset-project": "node ./scripts/reset-project.js",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "lint": "expo lint",
+    "brownfield:prebuild": "expo prebuild --platform android",
+    "brownfield:prebuild:clean": "expo prebuild --platform android --clean",
+    "brownfield:prebuild:ios": "expo prebuild --platform ios",
+    "brownfield:android:tasks": "expo-brownfield tasks:android",
+    "brownfield:android": "expo-brownfield build:android --release --repository Dist",
+    "brownfield:ios": "expo-brownfield build:ios --artifacts brownfield-output/ios",
+    "brownfield:host:assembleDebug": "cd brownfield-host-test && ./gradlew :app:assembleDebug",
+    "brownfield:host:installDebug": "cd brownfield-host-test && ./gradlew :app:installDebug",
+    "brownfield:host:assembleRelease": "cd brownfield-host-test && ./gradlew :app:assembleRelease",
+    "brownfield:host:installRelease": "cd brownfield-host-test && ./gradlew :app:installRelease"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^15.0.3",
+    "@react-navigation/bottom-tabs": "^7.4.0",
+    "@react-navigation/elements": "^2.6.3",
+    "@react-navigation/native": "^7.1.8",
+    "expo": "^55.0.0",
+    "expo-brownfield": "^55.0.22",
+    "expo-constants": "~55.0.16",
+    "expo-device": "~55.0.16",
+    "expo-font": "~55.0.7",
+    "expo-haptics": "~55.0.14",
+    "expo-image": "~55.0.10",
+    "expo-linking": "~55.0.15",
+    "expo-router": "~55.0.14",
+    "expo-splash-screen": "~55.0.20",
+    "expo-status-bar": "~55.0.6",
+    "expo-symbols": "~55.0.8",
+    "expo-system-ui": "~55.0.17",
+    "expo-web-browser": "~55.0.15",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-native": "0.83.6",
+    "react-native-gesture-handler": "~2.30.0",
+    "react-native-reanimated": "4.2.1",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.23.0",
+    "react-native-web": "~0.21.0",
+    "react-native-worklets": "0.7.4"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.10",
+    "eslint": "^9.25.0",
+    "eslint-config-expo": "~55.0.0",
+    "hermes-compiler": "^250829098.0.2",
+    "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "hermes-compiler": "$hermes-compiler"
+  },
+  "private": true
+}
